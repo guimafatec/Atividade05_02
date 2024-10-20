@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Atividade05_02</string>
+    <string name="my_name">Gustavo Guimarães de Oliveira</string>
+    <string name="my_ra">1110482313013</string>
+    <string name="et_bits">Bits</string>
+    <string name="bytes">Bytes</string>
+    <string name="K_bytes">KB</string>
+    <string name="M_bytes">MB</string>
+    <string name="G_bytes">GB</string>
+    <string name="T_bytes">TB</string>
+    <string name="btn_calc">Convert</string>
+</resources>

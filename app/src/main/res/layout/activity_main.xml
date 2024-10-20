@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvMyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/my_name"
+        app:layout_constraintBottom_toTopOf="@+id/tvMyRa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMyRa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="@string/my_ra"
+        app:layout_constraintBottom_toTopOf="@+id/etBits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyName" />
+
+    <EditText
+        android:id="@+id/etBits"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="@string/et_bits"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/rgXBytes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyRa" />
+
+    <RadioGroup
+        android:id="@+id/rgXBytes"
+        android:layout_width="101dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConvert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBits">
+
+        <RadioButton
+            android:id="@+id/rbBytes"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/bytes" />
+
+        <RadioButton
+            android:id="@+id/rbKB"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/K_bytes" />
+
+        <RadioButton
+            android:id="@+id/rbMB"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/M_bytes" />
+
+        <RadioButton
+            android:id="@+id/rbGB"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/G_bytes" />
+
+        <RadioButton
+            android:id="@+id/rbTB"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/T_bytes" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/btn_calc"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintStart_toStartOf="@+id/rgXBytes"
+        app:layout_constraintTop_toBottomOf="@+id/rgXBytes" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="87dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
